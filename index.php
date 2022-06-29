@@ -1,4 +1,4 @@
-<?php include('../../../include/connect.php');
+<?php include('../../include/connect.php');
 include('function.php');
         $page = (int) (!isset($_GET["page"]) ? 1 : $_GET["page"]);
         $limit = 3;
@@ -11,6 +11,7 @@ include('function.php');
 <html lang="en">
   <head>
     <meta charset="utf-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -21,24 +22,21 @@ include('function.php');
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-     <script src="../../../assets/jquery.min.js"></script>
+ <script src="../../../assets/jquery.min.js"></script>
   <script src="../../../assets/bootstrap.min.js"></script>
 
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-
-
-
     <!-- Custom styles for this template -->
-    <link href="offcanvas.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-  <style>
+   <link href="offcanvas.css" rel="stylesheet">
+ <style>
    body {
     background-image: url("../SERVER/background1.JPG");
     background-repeat: no-repeat;
 }
 </style>
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -48,7 +46,7 @@ include('function.php');
 
   <body>
       <?php include('header.php');?>
-    
+
 
         </div><!-- /.nav-collapse -->
 
@@ -59,16 +57,15 @@ include('function.php');
 
       <div class="row row-offcanvas row-offcanvas-right">
 
-     
+
           <p class="pull-right visible-xs">
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
           <div class="jumbotron">
-            <h2>Asset Management System</h2>
-          </div>
+            <h2>Ordering Management System</h2>
+            </div>
 
-
-
+            
 
        <div class="row row-offcanvas row-offcanvas-right">
 
@@ -78,14 +75,16 @@ include('function.php');
           </p>
 
 <div class="well">
-   <?php
+  <?php
       
                 $query = mysql_query("select * from tb_announcement {$statement} LIMIT {$startpoint} , {$limit}   ") or die(mysql_error());
                 while ($row = mysql_fetch_array($query)) {
          ?>
 
 
-        <div class="row"> 
+        <div class="row">
+
+           
             <div class="col-md-5">
                 <form method="post">
                     <input type="hidden" name="image" value="../SERVER/ADS/<?php echo $row['image'];?>"  />
@@ -126,9 +125,11 @@ include('function.php');
                 </ul>
             </div>
 </div>
+
+          
         </div><!--/span-->
-      
-      <?php
+
+<?php
 	if(isset($_POST['image'])){
 	   $image=$_POST['image'];
        $name= $_POST['name'];
@@ -162,24 +163,6 @@ include('function.php');
 <?php
 	}
 ?>
-      
-        
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-		<div class="list-group">
-		<a href="index.php" class="list-group-item active">Home</a> 
-            <a href="asset.php" class="list-group-item">Products</a>
-            <a href="reports.php" class="list-group-item">Product Report</a>
-            <a href="reports1.php" class="list-group-item">Product List</a>
-            __________________________________
-            <a href="equipment.php" class="list-group-item">Equipment</a>
-            <a href="careoff_report.php" class="list-group-item">Assigned Equipment</a>
-            <a href="fixedasset_report.php" class="list-group-item">Fixed Asset Report</a>
-            <a href="configuration.php" class="list-group-item">Equipment Category</a>
-          </div>
-          </div>
-          <div class="list-group">
-
-
       <hr>
 
       <?php include('footer.php');?>

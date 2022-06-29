@@ -54,7 +54,7 @@ include('function.php');
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
            <div class="jumbotron">
-            <h2>Asset Management System</h2>
+            <h2>Online Ordering System</h2>
           </div>
 
 
@@ -73,11 +73,7 @@ include('function.php');
                 $query = mysql_query("select * from tb_announcement {$statement} where announcementID='$id' LIMIT {$startpoint} , {$limit}   ") or die(mysql_error());
              $row = mysql_fetch_array($query);
          ?>
-
-
         <div class="row">
-
-           
             <div class="col-md-5">
                 <form method="post">
                     <input type="hidden" name="image" value="../SERVER/ADS/<?php echo $row['image'];?>"  />
