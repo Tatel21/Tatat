@@ -21,7 +21,6 @@ include('function.php');
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
  <script src="../../../assets/jquery.min.js"></script>
   <script src="../../../assets/bootstrap.min.js"></script>
     <!-- Custom styles for this template -->
@@ -55,7 +54,7 @@ include('function.php');
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
            <div class="jumbotron">
-            <h2>Customer Relationship Management System</h2>
+            <h2>Asset Management System</h2>
           </div>
 
 
