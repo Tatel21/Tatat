@@ -23,10 +23,10 @@
     <!-- Navigation -->
     <div id="navigation">
       <ul>
-        <li><a href="home.html" class="active">Home</a></li>
-        <li><a href="login/index.php">Login</a></li>
-        <li><a href="registration/sign-up.php">Register</a></li>
-        <li><a href="#">The Store</a></li>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="index.html">Logout</a></li>
+        <li><a href="registration-form/index.php">Account</a></li>
+        <li><a href="#">Cart</a></li>
         <li><a href="#">About</a></li>
       </ul>
     </div>
@@ -38,19 +38,6 @@
     <div class="cl">&nbsp;</div>
     <!-- Content -->
     <div id="content">
-      <!-- Content Slider -->
-      <div id="slider" class="box">
-        <div id="slider-holder">
-          <ul>
-            <li><a href="#"><img src="clothes/paper/images (18).jpg" width="720px" height="252px" alt="" /></a></li>
-            <li><a href="#"><img src="clothes/paper/images (20).jpg" width="720px" height="252px" alt="" /></a></li>
-            <li><a href="#"><img src="clothes/paper/images (21).jpg" width="720px" height="252px" alt="" /></a></li>
-            <li><a href="#"><img src="clothes/paper/images (22).jpg" width="720px" height="252px" alt="" /></a> </li>
-          </ul>
-        </div>
-        <div id="slider-nav"> <a href="#" class="active">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> </div>
-      </div>
-      <!-- End Content Slider -->
       <!-- Products -->
       <div class="products">
         <div class="cl">&nbsp;</div>
@@ -62,7 +49,7 @@
                 <h4>WOMEN’S</h4>
                 <p>Lorem ipsum dolor sit<br />
                   amet</p>
-                <strong class="price">P58.99</strong> </div>
+                <strong class="price">$58.99</strong> </div>
             </div>
           </li>
           <li> <a href="#"><img src="clothes/paper/images (23).jpg" width="231px" height="192px" alt="" /></a>
@@ -72,7 +59,7 @@
                 <h4>WOMEN’S</h4>
                 <p>Lorem ipsum dolor sit<br />
                   amet</p>
-                <strong class="price">P58.99</strong> </div>
+                <strong class="price">$58.99</strong> </div>
             </div>
           </li>
           <li class="last"> <a href="#"><img src="clothes/paper/images (22).jpg" width="231px" height="192px" alt="" /></a>
@@ -82,7 +69,37 @@
                 <h4>WOMEN’S</h4>
                 <p>Lorem ipsum dolor sit<br />
                   amet</p>
-                <strong class="price">P58.99</strong> </div>
+                <strong class="price">$58.99</strong> </div>
+            </div>
+          </li>
+		  <li> <a href="#"><img src="clothes/paper/images (25).jpg" width="231px" height="192px" alt="" /></a>
+            <div class="product-info">
+              <h3>LOREM IPSUM</h3>
+              <div class="product-desc">
+                <h4>WOMEN’S</h4>
+                <p>Lorem ipsum dolor sit<br />
+                  amet</p>
+                <strong class="price">$58.99</strong> </div>
+            </div>
+          </li>
+          <li> <a href="#"><img src="clothes/paper/images (23).jpg" width="231px" height="192px" alt="" /></a>
+            <div class="product-info">
+              <h3>LOREM IPSUM</h3>
+              <div class="product-desc">
+                <h4>WOMEN’S</h4>
+                <p>Lorem ipsum dolor sit<br />
+                  amet</p>
+                <strong class="price">$58.99</strong> </div>
+            </div>
+          </li>
+          <li class="last"> <a href="#"><img src="clothes/paper/images (22).jpg" width="231px" height="192px" alt="" /></a>
+            <div class="product-info">
+              <h3>LOREM IPSUM</h3>
+              <div class="product-desc">
+                <h4>WOMEN’S</h4>
+                <p>Lorem ipsum dolor sit<br />
+                  amet</p>
+                <strong class="price">$58.99</strong> </div>
             </div>
           </li>
         </ul>
@@ -210,8 +227,8 @@
   <!-- End Side Full -->
   <!-- Footer -->
   <div id="footer">
-    <p class="left"> <a href="#">Home</a> <span>|</span> <a href="login-form/index.html">Login</a> <span>|</span> <a href="registration-form/index.php">Register</a> <span>|</span> <a href="#">The Store</a> <span>|</span> <a href="#">Admin</a> </p>
-    
+    <p class="left"> <a href="#">Home</a> <span>|</span> <a href="login-form/index.html">Logout</a> <span>|</span> <a href="registration-form/index.php">Account</a> <span>|</span> <a href="#">Cart</a> <span>|</span> <a href="#">Admin</a> </p>
+    <p class="right"> &copy; 2010 Shop Around. Design by <a href="http://chocotemplates.com">Chocotemplates.com</a> </p>
   </div>
   <!-- End Footer -->
 </div>
