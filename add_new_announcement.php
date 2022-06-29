@@ -1,4 +1,4 @@
-<?php include('../../include/connect.php');  include('../SERVER/sessions.php'); ?>
+<?php include('../../../include/connect.php');   include('../sessions.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../../../img/aalogo.jpg">
+    <link rel="shortcut icon" href="../../../../img/aalogo.jpg">
 
-    <title>Erishop</title>
+    <title>EriShop</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="css/bootstrap.css" rel="stylesheet">
+   
 
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 
@@ -71,13 +71,13 @@
                                 $image_name = addslashes($_FILES['image']['name']);
                                 $image_size = getimagesize($_FILES['image']['tmp_name']);
 //
-                                move_uploaded_file($_FILES["image"]["tmp_name"], "../SERVER/ADS/upload/" . $_FILES["image"]["name"]);
+                                move_uploaded_file($_FILES["image"]["tmp_name"], "upload/" . $_FILES["image"]["name"]);
                                 $pic = "upload/" . $_FILES["image"]["name"];
 
 
                                         
-                         mysql_query("insert into tb_announcement(announcementID,detail,date,name,place,image) values ('$id','$details','$date','$name','$location','$pic')") 
-                     or die(mysql_error());
+                         mysql_query("insert into tb_announcement(announcementID,detail,date,name,place,image) values ('$id','$details','$date','$name','$location','$pic')") or die(mysql_error());
+                     
                      
                      $result1 = mysql_query("select * from tb_user where userID=$userID");
               $row1=mysql_fetch_array($result1);
@@ -117,11 +117,11 @@
       <input type="text" name="name"  class="form-control" id="inputEmail3" required/>
     </div>
   </div>
-
+    
    <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">Image</label>
     <div class="col-sm-10">
-      <input type="file" name="image"/>
+      <input type="file" name="image" required/>
     </div>
   </div>
 
@@ -130,9 +130,8 @@
     <div class="col-sm-10">
   <div class="input-group date form_datetime col-md-5" data-link-field="dtp_input1">
  <input class="form-control input-large"  onchange="validation()" size="50" id="sched" type="text" name="date" required/>
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span> 
                 </div>Note: Format(Year-Month-Day Hours:minutes:seconds) Ex: <?php
-
 $current_date = date('Y-m-d');
 $time  = time('H:m:s');
 echo $current_date."&nbsp;"; 
@@ -140,6 +139,7 @@ echo date('h:m:s ');
 
 
 ?> 
+
     </div>
   </div> 
 
@@ -183,7 +183,7 @@ echo date('h:m:s ');
 		  <a href="index.php" class="list-group-item ">Home</a>
             <a href="Customers.php" class="list-group-item">Customers<img src="customer.png"></a>
             <a href="Customer_list.php" class="list-group-item">Customer List<img src="customer.png"></a>
-				<a href="announcement.php" class="list-group-item active">Announcement<img src="head.png"></a>
+			<a href="announcement.php" class="list-group-item active">Announcement<img src="head.png"></a>
             <a href="messages.php" class="list-group-item">Messages <img src="message.png"><span class="badge badge-info"><?php include('query.php');?></span></a>
           </div>
         </div><!--/span-->

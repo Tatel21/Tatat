@@ -37,7 +37,7 @@ function myFunction()
    
 <a href="" id="printpagebutton" onclick="myFunction()">Print</a>
 
-                    <div align="center" style="margin-top:40px; height:80px;"> <!--<img src="../../../img/AA2000.jpg"><br />--> 
+                    <div align="center" style="margin-top:40px; height:80px;"><img src="../../../../img/AA2000.jpg"><br /> 
  <B>Customer List</B> </div>
  <br/>
  

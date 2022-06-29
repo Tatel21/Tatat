@@ -1,6 +1,6 @@
 <?php
 include('../../../include/connect.php');
-include('../SERVER/sessions.php'); 
+include('../sessions.php'); 
 $id=$_GET['id'];
 
 $result= mysql_query("select * from message where ID='$id'");

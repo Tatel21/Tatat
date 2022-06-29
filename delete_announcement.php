@@ -1,6 +1,6 @@
 <?php
-include('../../include/connect.php');
-include('../SERVER/sessions.php');
+include('../../../include/connect.php');
+include('../sessions.php');
 
 $get_id=$_GET['id'];
 $ann=mysql_query("select * from tb_announcement where announcementID=$get_id");

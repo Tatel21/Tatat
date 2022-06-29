@@ -19,12 +19,12 @@ a:active {
 }
 -->
 </style>
- <link rel="stylesheet" href="../../../assets/bootstrap.min.css">
-  <script src="../../../assets/jquery.min.js"></script>
-  <script src="../../../assets/bootstrap.min.js"></script>
 
+ <link rel="stylesheet" href="../../../../assets/bootstrap.min.css">
+  <script src="../../../../assets/jquery.min.js"></script>
+  <script src="../../../../assets/bootstrap.min.js"></script>
 
-                    <div align="center" style="margin-top:40px; height:80px;"><!--<img src="../../../img/AA2000.JPG">--> <br /> 
+<div align="center" style="margin-top:40px; height:80px;"><img src="../../../../img/AA2000.jpg"><br /> 
  <B>Messages</B> </div>
  <br/>
  <br/> <br/>

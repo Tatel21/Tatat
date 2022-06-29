@@ -1,4 +1,7 @@
-<?php include('../../../include/connect.php'); ?>
+<?php include('../../../include/connect.php');
+include('../sessions.php');
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -94,21 +97,21 @@ checkboxes[i].checked = source.checked;
                   $id=$row['CustomerID'];
                
     ?><!--------------------end code for search engine-------->
-                                
+    
+
+
       
                     
                   <tr class="del<?php echo $id ?>">
-                  <td><input name="selector[]" type="checkbox" value="<?php echo $row['CustomerID']; ?>"> <?php echo $row['CustomerID']; ?></td>                            
+                  <td><input name="selector[]" type="checkbox"  value="<?php echo $row['CustomerID']; ?>"> <?php echo $row['CustomerID']; ?></td>                            
                                     <td><?php echo $row['Firstname']; ?></td>
                                      <td ><?php echo $row['Middle_name']; ?> </td> 
                                       <td ><?php echo $row['Lastname']; ?> </td> 
                                       <td ><?php echo $row['Gender']; ?> </td>
                                       <td><?php echo $row['Date_created']; ?></td> 
                                     <td>
-                    
-                   <a  rel="tooltip"  title="View" id="v<?php echo $id; ?>"  href="View_Customer.php?id=<?php echo $row['CustomerID'];?>" class="btn btn-info">View</a>
-                                    <a  rel="tooltip"  title="Data will be move to History" id="<?php echo $id; ?>"  href="Archive.php?id=<?php echo $row['CustomerID'];?>" class="btn btn-success">Archive</a>
-                                    </td>
+                   <a  rel="tooltip"  title="View" id="<?php echo $id; ?>"  href="View_Customer.php?id=<?php echo $row['CustomerID'];?>" class="btn btn-info">View</a>
+                   <a  rel="tooltip"  title="Data will be move to History" id="<?php echo $id; ?>" onclick="return confirm('Are you sure you want to move to Archive?')"  href="Archive.php?id=<?php echo $row['CustomerID'];?>" class="btn btn-success">Archive</a>
                                     </td>
                   
                                     </tr>

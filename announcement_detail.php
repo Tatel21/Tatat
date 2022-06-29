@@ -1,4 +1,4 @@
-<?php include('../../include/connect.php');
+<?php include('../../../include/connect.php');
 include('function.php');
         $page = (int) (!isset($_GET["page"]) ? 1 : $_GET["page"]);
         $limit = 3;
@@ -15,14 +15,15 @@ include('function.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../../../img/aalogo.jpg">
+    <link rel="shortcut icon" href="../../../../img/aalogo.jpg">
 
     <title>EriShop</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
- <script src="../../../assets/jquery.min.js"></script>
-  <script src="../../../assets/bootstrap.min.js"></script>
+ <!--<link rel="stylesheet" href="../../../../assets/bootstrap.min.css">-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
     <!-- Custom styles for this template -->
     <link href="offcanvas.css" rel="stylesheet">
 
@@ -54,7 +55,7 @@ include('function.php');
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
            <div class="jumbotron">
-            <h2>Online Ordering System</h2>
+            <h2>Customer Relationship Management System</h2>
           </div>
 
 
@@ -76,13 +77,13 @@ include('function.php');
         <div class="row">
             <div class="col-md-5">
                 <form method="post">
-                    <input type="hidden" name="image" value="../SERVER/ADS/<?php echo $row['image'];?>"  />
+                    <input type="hidden" name="image" value="<?php echo $row['image'];?>"  />
                     <input type="hidden" name="name" value="<?php echo $row['name'];?>" />
-                    <input type="image" src="../SERVER/ADS/<?php echo $row['image'];?>" name="image"  class="img-responsive"/>
+                    <input type="image" src="<?php echo $row['image'];?>" name="image"  class="img-responsive"/>
                 </form>
             </div>
             <div class="col-md-6">
-                <h3><a href="blog-post.html"><?php echo $row['name'];?></a>
+                <h3><a href=""><?php echo $row['name'];?></a>
                 </h3>
                 <p>Date: <?php echo date("F j, Y - h:i A ", strtotime($row['date'])) ?></p>
                 <p>
@@ -140,7 +141,6 @@ include('function.php');
 <?php
 	}
 ?>
-
 
       <hr>
 

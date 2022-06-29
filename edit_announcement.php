@@ -1,6 +1,4 @@
-<?php include('../../include/connect.php'); 
-include('../SERVER/sessions.php'); 
-?>
+<?php include('../../../include/connect.php'); include('../sessions.php');  ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,14 +7,13 @@ include('../SERVER/sessions.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../../../img/aalogo.jpg">
+    <link rel="shortcut icon" href="../../../../img/aalogo.jpg">
 
     <title>EriShop</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="css/bootstrap.css" rel="stylesheet">
 
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 
@@ -75,7 +72,7 @@ include('../SERVER/sessions.php');
                      or die(mysql_error());
                      
                      
-                      $result1 = mysql_query("select * from tb_user where userID=$userID");
+                     $result1 = mysql_query("select * from tb_user where userID=$userID");
               $row1=mysql_fetch_array($result1);
     date_default_timezone_set('Asia/Manila');
     $date=date('F j, Y g:i:a  ');
@@ -173,7 +170,7 @@ $row=mysql_fetch_array($query);
           <a href="index.php" class="list-group-item ">Home</a>
             <a href="Customers.php" class="list-group-item">Customers<img src="customer.png"></a>
             <a href="Customer_list.php" class="list-group-item">Customer List<img src="customer.png"></a>
-				<a href="announcement.php" class="list-group-item active">Announcement<img src="head.png"></a>
+			<a href="announcement.php" class="list-group-item active">Announcement<img src="head.png"></a>
             <a href="messages.php" class="list-group-item">Messages <img src="message.png"><span class="badge badge-info"><?php include('query.php');?></span></a>
           </div>
         </div><!--/span-->

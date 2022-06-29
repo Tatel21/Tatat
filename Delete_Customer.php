@@ -1,6 +1,8 @@
 <?php
 include('../../../include/connect.php');
-include('../SERVER/sessions.php');
+include('../sessions.php'); 
+
+
 
 if (isset($_POST['delete'])){
     
@@ -8,11 +10,10 @@ if (isset($_POST['delete'])){
       ?>  
       
       <script type="text/javascript">
-        alert("No Data to delete! Check some boxes to delete the Data. ");
+        alert("No Data to delete! Check some boxes to delete the Data.");
           window.location= "Customers.php";
 </script>
 
-       
         <?php
     }else{
         $id=$_POST['selector'];
@@ -42,3 +43,13 @@ for($i=0; $i < $N; $i++)
     }
 }
 ?>
+
+
+
+
+
+
+
+
+
+

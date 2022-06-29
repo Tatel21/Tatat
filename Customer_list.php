@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../../../img/aalogo.jpg">
+    <link rel="shortcut icon" href="../../../../img/aalogo.jpg">
 
     <title>EriShop</title>
 
@@ -17,7 +17,6 @@
 
       <link href="css/font-awesome.css" rel="stylesheet" media="screen">
 
-   <link href="css/bootstrap.css" rel="stylesheet" media="screen">
 
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
    <script type="text/javascript" charset="utf-8" language="javascript" src="js/jquery.dataTables.js"></script>
@@ -71,8 +70,8 @@
 		<a href="index.php" class="list-group-item ">Home</a>
             <a href="Customers.php" class="list-group-item">Customers<img src="customer.png"></a>
             <a href="Customer_list.php" class="list-group-item active">Customer List<img src="customer.png"></a>
-			<a href="announcement.php" class="list-group-item">Announcement<img src="head.png"></a>
-            <a href="messages.php" class="list-group-item">Messages <img src="message.png"><span class="badge badge-info"><?php include('query.php');?></span></a>  
+			<a href="announcement.php" class="list-group-item">Announcement<img src="head.png"></a> 
+            <a href="messages.php" class="list-group-item">Messages <img src="message.png"><span class="badge badge-info"><?php include('query.php');?></span></a> 
           </div>
 
         <!--end of sidebar-->

@@ -7,14 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../../../img/aalogo.jpg">
+    <link rel="shortcut icon" href="../../../../img/aalogo.jpg">
 
-    <title>EriShop</title>
+    <title>AA2000 Security and Technology</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="css/bootstrap.css" rel="stylesheet">
 
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 
@@ -159,6 +157,7 @@ $row=mysql_fetch_array($query);
             <a href="Customer_list.php" class="list-group-item">Customer List<img src="customer.png"></a>
 			<a href="announcement.php" class="list-group-item">Announcement<img src="head.png"></a>
             <a href="messages.php" class="list-group-item">Messages <img src="message.png"><span class="badge badge-info"><?php include('query.php');?></span></a>
+			
           </div>
         </div><!--/span-->
 

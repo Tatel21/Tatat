@@ -1,4 +1,4 @@
-<?php include('../../include/connect.php'); include('../SERVER/sessions.php'); ?>
+<?php include('../../../include/connect.php'); include('../sessions.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../../../img/aalogo.jpg">
+    <link rel="shortcut icon" href="../../../../img/aalogo.jpg">
 
     <title>EriShop</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="css/bootstrap.css" rel="stylesheet">
+   
 
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 
@@ -67,22 +67,20 @@
                                 $image_name = addslashes($_FILES['image']['name']);
                                 $image_size = getimagesize($_FILES['image']['tmp_name']);
 //
-                                move_uploaded_file($_FILES["image"]["tmp_name"], "../SERVER/ADS/upload/" . $_FILES["image"]["name"]);
+                                move_uploaded_file($_FILES["image"]["tmp_name"], "upload/" . $_FILES["image"]["name"]);
                                 $pic = "upload/" . $_FILES["image"]["name"];                                
                                         
                          mysql_query("update tb_announcement
           set image='$pic' where announcementID='$id'") 
                      or die(mysql_error());
                      
-                     
-                     $result1 = mysql_query("select * from tb_user where userID=$userID");
+                       $result1 = mysql_query("select * from tb_user where userID=$userID");
               $row1=mysql_fetch_array($result1);
     date_default_timezone_set('Asia/Manila');
     $date=date('F j, Y g:i:a  ');
     $user=$row1['username'];
     $detail="image=$pic where announcementID=$id was Updated";
               mysql_query("insert into audit_trail(ID,User,Date_time,Outcome,Detail)values('$userID','$user','$date','Updated','$detail')");
-       
                                             ?>
 
                                          
@@ -118,7 +116,7 @@ $row=mysql_fetch_array($query);
    <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">Image</label>
     <div class="col-sm-10">
-      <input type="file" name="image">
+      <input type="file" name="image" required>
     </div>
   </div>
 

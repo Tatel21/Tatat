@@ -1,6 +1,6 @@
 <?php
 include('../../../include/connect.php');
-include('../SERVER/sessions.php'); 
+include('../sessions.php'); 
 $id=$_GET['id'];
 $query1=mysql_query("select * from tb_user where userID='$userID'");
 $row1=mysql_fetch_array($query1);
@@ -10,9 +10,9 @@ $cusid=$row['CustomerID'];
 $query2=mysql_query("select * from tb_sentmessage where CustomerID='$cusid'");
 $row3=mysql_fetch_array($query2);
 ?>
- <link rel="stylesheet" href="../../../assets/bootstrap.min.css">
-  <script src="../../../assets/jquery.min.js"></script>
-  <script src="../../../assets/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="../../../../assets/bootstrap.min.css">
+  <script src="../../../../assets/jquery.min.js"></script>
+  <script src="../../../../assets/bootstrap.min.js"></script>
 
 <form method="post">
 <input class="btn btn-success" name="readonly" type="hidden" value="<?php echo $row3['CustomerID']; ?>" />
@@ -88,10 +88,10 @@ window.location="messages_box.php";
     while($row2=mysql_fetch_array($quer)){
 ?>
 <tr>
-<td><?php echo $row2['CustomerID']; ?></td>
-<td><?php echo $row2['Recipient']; ?></td>
-<td><?php echo $row2['Email']; ?></td>
-<td><?php echo $row2['From_admin']; ?></td>
+<td><font size="2"><strong><?php echo $row2['CustomerID']; ?></strong></font></td>
+<td><font size="2"><strong><?php echo $row2['Recipient']; ?></strong></font></td>
+<td><font size="2"><strong><?php echo $row2['Email']; ?></strong></font></td>
+<td><font size="2"><strong><?php echo $row2['From_admin']; ?></strong></font></td>
 <td>
 <form method="POST">
 <input type="hidden" name="message" value="<?php echo $row2['Message']; ?>" />
@@ -100,7 +100,7 @@ window.location="messages_box.php";
 <input type="submit" name="submit" class="btn btn-primary" value="OPEN" />
 </form>
 </td>
-<td><?php echo $row2['Date_created']; ?></td>
+<td><font size="2"><strong><?php echo $row2['Date_created']; ?></strong></font></td>
 </tr>
 <?php
 	}
