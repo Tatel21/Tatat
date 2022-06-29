@@ -7,12 +7,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.php"><img src="aalogo.jpg"> EriShop</a>
+          <a class="navbar-brand" href="index.php"><img src="">Metallfit Inc.</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="index.php">CRM</a></li>
-            <li><a href="../AS/index.php" >ASSET</a></li>
-            <li><a href="../OOS/index.php">ONLINE ORDERING</a></li>
-             <li><a href="../index.php">Back</a></li>
+            <li><a href="#" style="pointer-events: none;">EMS</a></li>
+            <li class="active"><a href="index.php" >AMS</a></li>
+            <li><a href="#" style="pointer-events: none;">OSOMS</a></li>
+            <li><a href="../logout.php">Log Out</a></li>
           </ul>

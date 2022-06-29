@@ -1,3 +1,3 @@
      <center> <footer>
-        <p>&copy; EriShop <?php echo date("Y")?></p>
+        <p>&copy; Metallfit Inc. 2014</p>
       </footer> </center>
